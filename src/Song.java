@@ -1,14 +1,17 @@
 import javax.swing.*;
 
-public class Songs {
+public class Song{
 
     private String artistName;
-    private String song;
+    private String title;
+    //JB - see if you can add a few more attributes here that might allow some extra functionality to be introduced
+    //For example, if you add a releaseYear attribute then you could do a search on all the songs to get a list of
+    //any that were in the 1990s, to create a "90s playlist"
 
 
-    Songs(String artistName, String song) {
+    Song(String artistName, String title) {
         setArtistName(artistName);
-        setSong(song);
+        setSong(title);
     }
 
     public String getArtistName() {
@@ -16,7 +19,7 @@ public class Songs {
     }
 
     public String getSong() {
-        return song;
+        return title;
     }
 
     public void setArtistName(String artistName) {
@@ -24,15 +27,15 @@ public class Songs {
     }
 
     public void setSong(String song) {
-        this.song = song;
+        this.title = song;
     }
 
     public String toString() {
         return "Artist Name: " + getArtistName() + " Song: " + getSong() + "\n";
     }
-}
 
-   /* public void moreSongs() {
+
+    /*public void moreSongs() {
 
         String songs = "";
         String artistName = "";
@@ -43,5 +46,5 @@ public class Songs {
             JOptionPane.showInputDialog("Please enter the artist name: " + artistName);
         }
 
-    }
-}*/
+    }*/
+}
