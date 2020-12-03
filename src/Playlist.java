@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+/**
+ *
+ */
 public class Playlist {
 
     private String name; //added by JB - the name that identifies this playlist
@@ -9,28 +12,66 @@ public class Playlist {
     //feel free to add other attributes here that you think could be relevant
     //I'll let you generate the multi-arg constructor
 
-     Song s1 = new Song("MGK","Forget Me Too",2020);
-     Song s2 = new Song("Aries","Racecar",2018);
-     Song s3 = new Song("Deep Purple","Sometimes I Feel Like Screaming",1996);
+    Song s1 = new Song("MGK", "Forget Me Too", 2020);
+    Song s2 = new Song("Aries", "Racecar", 2018);
+    Song s3 = new Song("Deep Purple", "Sometimes I Feel Like Screaming", 1996);
 
-     public Playlist(String name, ArrayList<Song> songs, int playListID){
-         setName(name);
-         setSongs(songs);
-         setPlayListID(playListID);
-     }
+    /**
+     * @param name
+     * @param songs
+     * @param playListID
+     */
+    public Playlist(String name, ArrayList<Song> songs, int playListID) {
+        setName(name);
+        setSongs(songs);
+        setPlayListID(playListID);
+    }
 
+    public Playlist() {
+    }
+
+    /**
+     * @return
+     */
     //along with the accessors and mutators (note that playListID is meant to be auto-generated)
-     public String getName(){return name;}
+    public String getName() {
+        return name;
+    }
 
-     public ArrayList<Song> getSongs() {return songs; }
+    /**
+     * @return
+     */
+    public ArrayList<Song> getSongs() {
+        return songs;
+    }
 
-     public int getPlayListID(){return playListID;}
+    /**
+     * @return
+     */
+    public int getPlayListID() {
+        return playListID;
+    }
 
-     public void setName(String name){this.name = name;}
+    /**
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
-     public void setSongs(ArrayList<Song> songs){this.songs = songs;}
+    /**
+     * @param songs
+     */
+    public void setSongs(ArrayList<Song> songs) {
+        this.songs = songs;
+    }
 
-     public void setPlayListID(int playListID){this.playListID = playListID;}
+    /**
+     * @param playListID
+     */
+    public void setPlayListID(int playListID) {
+        this.playListID = playListID;
+    }
 
     //also generate a toString() to display the state of a playlist and allow you to test out
 
@@ -43,15 +84,21 @@ public class Playlist {
     //check out lab-sheets 3/4/5 for further information
 
 
+    /**
+     * @param song
+     */
     //added by JB - add a song to this playlist
     public void addSong(Song song) {
         songs.add(song);
     }
 
+    /**
+     * @param song
+     */
     //added by JB - remove a song from this playlist
     public void removeSong(Song song) {
-        for(int i=0; i< songs.size(); i++)
-            if(songs.get(i) == song)
+        for (int i = 0; i < songs.size(); i++)
+            if (songs.get(i) == song)
                 songs.remove(song);
     }
 
