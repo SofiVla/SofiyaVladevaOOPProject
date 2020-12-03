@@ -4,14 +4,16 @@ public class Song{
 
     private String artistName;
     private String title;
+    private int releaseYear;
     //JB - see if you can add a few more attributes here that might allow some extra functionality to be introduced
     //For example, if you add a releaseYear attribute then you could do a search on all the songs to get a list of
     //any that were in the 1990s, to create a "90s playlist"
 
 
-    Song(String artistName, String title) {
+    Song(String artistName, String title, int releaseYear) {
         setArtistName(artistName);
         setSong(title);
+        setReleaseYear(releaseYear);
     }
 
     public String getArtistName() {
@@ -22,6 +24,8 @@ public class Song{
         return title;
     }
 
+    public int getReleaseYear(){return releaseYear;}
+
     public void setArtistName(String artistName) {
         this.artistName = artistName;
     }
@@ -30,8 +34,10 @@ public class Song{
         this.title = song;
     }
 
+    public void setReleaseYear(int releaseYear){this.releaseYear = releaseYear;}
+
     public String toString() {
-        return "Artist Name: " + getArtistName() + " Song: " + getSong() + "\n";
+        return "Artist Name: " + getArtistName() + " Song: " + getSong() + " Release Year: " + getReleaseYear();
     }
 
 
