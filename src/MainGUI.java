@@ -126,3 +126,9 @@ public class MainGUI extends JFrame implements ActionListener {
 
     }
 }
+/*
+ * Author: John Brosnan
+ * Site owner: John Brosnan
+ * Date: December 2020
+ *
+ */
